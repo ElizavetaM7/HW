@@ -24,7 +24,7 @@ namespace WinFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             date1 = date1.AddMilliseconds(100);
-            label1.Text = date1.ToString("mm:ss:f");
+            label1.Text = date1.ToString("mm:ss.f");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace WinFormsApp1
         {
             timer1.Enabled = false;
             DateTime date1 = new DateTime(0, 0);
-            label1.Text = date1.ToString("mm:ss:f");
+            label1.Text = date1.ToString("mm:ss.f");
             button1.Text = "Пуск";
         }
 
