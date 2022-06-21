@@ -27,13 +27,13 @@ namespace Secundomer
         /// Требуемый метод для поддержки конструктора — не изменяйте 
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
-        //private void InitializeComponent()
-        //{
-        //    this.components = new System.ComponentModel.Container();
-        //    this.Timelabel = new System.Windows.Forms.Label();
-        //    this.SSbutton = new System.Windows.Forms.Button();
-        //    this.Resbutton = new System.Windows.Forms.Button();
-        //    this.timer2 = new System.Windows.Forms.Timer(this.components);
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.Timelabel = new System.Windows.Forms.Label();
+            this.SSbutton = new System.Windows.Forms.Button();
+            this.Resbutton = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // Timelabel
