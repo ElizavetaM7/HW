@@ -8,69 +8,52 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Secundomer
+namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+
+
         public Form1()
         {
             InitializeComponent();
 
-            Timelabel.Text = "00:00.0";
-            timer2.Interval = 1;
         }
-        public int min, sec, ms;
-        private void StartStop(object sender, EventArgs e)
+        DateTime date1 = new DateTime(0, 0);
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            if(timer2.Enabled)
+            date1 = date1.AddMilliseconds(100);
+            label1.Text = date1.ToString("mm:ss:f");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (timer1.Enabled == false)
             {
-                min = 0;
-                sec = 0;
-                ms = 0;
-                timer2.Enabled = false;
-                SSbutton.Text = "СТОП";
-                Resbutton.Enabled = true;
+                timer1.Enabled = true;
+                button1.Text = "Стоп";
             }
             else
             {
-                timer2.Enabled = true;
-                SSbutton.Text = "СТАРТ";
-                Resbutton.Enabled = true;
+                timer1.Enabled = false;
+                button1.Text = "Пуск";
+
             }
         }
 
-        
-        private void SSbutton_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            timer2.Enabled = true;
+            timer1.Enabled = false;
+            DateTime date1 = new DateTime(0, 0);
+            label1.Text = date1.ToString("mm:ss:f");
+            button1.Text = "Пуск";
         }
-        private void Resert(object sender, EventArgs e)
-        {
-            timer2.Enabled = true;
-            min = 0;
-            sec = 0;
-            ms = 0;
-            Timelabel.Text = min+":"+sec+"."+ms;
-            timer2.Enabled=false;
-        }
-        private void Timelabel_Click(object sender, EventArgs e)
-        {
-            ms += 1;
-            if (ms == 10)
-            {
-                ms = 0;
-                sec += 1;
-            }
-            if (sec == 60)
-            {
-                sec = 0;
-                min += 1;
-            }
-            if (min == 60)
-                min = 0;
-            Timelabel.Text = min + ":" + sec + "." + ms;
-        }
- 
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

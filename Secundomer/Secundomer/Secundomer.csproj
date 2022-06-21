@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{71901DAB-C244-47C3-93BC-B20B4D8FA6C9}</ProjectGuid>
+    <ProjectGuid>{37CF2DEC-9F4A-424D-BC06-BF42E7E27D61}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Secundomer</RootNamespace>
     <AssemblyName>Secundomer</AssemblyName>
