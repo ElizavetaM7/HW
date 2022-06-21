@@ -26,7 +26,7 @@ namespace Secundomer3
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
-            labelTime.Text = 
+            //labelTime.Text = 
         }
     }
 }
